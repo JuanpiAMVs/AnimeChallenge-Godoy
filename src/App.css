@@ -3,3 +3,26 @@
   width: 50px;
   height: 30px;
 }
+
+.card{
+  width: 15rem;
+}
+
+.Count{
+  display: inline-flex;
+  height: 2.5rem;
+}
+
+.stock{
+  width: 10rem;
+  text-align: center;
+  border-style:groove;
+  border-color: #0000ff;
+  
+}
+.ListContainer{
+  display: flex;
+}
+.card-img-top{
+  height: 30rem;
+}
