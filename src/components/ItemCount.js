@@ -12,11 +12,11 @@ const ItemCount = () =>{
         <>
         <div className="Count">
             <p>stock</p>
-            <button onClick={add} type="button" class="btn btn-primary btn-stock">+</button>
+            <button onClick={add} type="button" className="btn btn-primary btn-stock">+</button>
             <div className="stock">
                 <p>{stock}</p>
             </div>
-            <button onClick={subtract} type="button" class="btn btn-primary btn-stock">-</button>
+            <button onClick={subtract} type="button" className="btn btn-primary btn-stock">-</button>
         </div>
         </>
     )

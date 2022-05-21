@@ -2,7 +2,7 @@ import ItemList from "../components/ItemList";
 const data = [
     {   id:1,
         thumbnail:"https://m.media-amazon.com/images/I/61auN0wXGFL._AC_SL1000_.jpg",
-        title:"Asuna",
+        title:"Asuna Yuuki",
         description: "Goddess of creation"
     },
     {   id:2,
