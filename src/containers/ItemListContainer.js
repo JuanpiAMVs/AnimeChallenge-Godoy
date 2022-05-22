@@ -1,36 +1,20 @@
+import { useEffect, useState } from "react";
 import ItemList from "../components/ItemList";
-const data = [
-    {   id:1,
-        thumbnail:"https://m.media-amazon.com/images/I/61auN0wXGFL._AC_SL1000_.jpg",
-        title:"Asuna Yuuki",
-        description: "Goddess of creation"
-    },
-    {   id:2,
-        thumbnail:"https://m.media-amazon.com/images/I/61X8uAxsdML._AC_SL1500_.jpg",
-        title:"Lucy Hearfilia",
-        description: "Fairy Tail Final Season"
-    },
-    {   id:3,
-        thumbnail:"https://m.media-amazon.com/images/I/61Si8lpc6QL._AC_SL1200_.jpg",
-        title:"Shinobu Kocho",
-        description: "Demon Slayer"
-    }
-]
-const ItemListContainer = () => {
+import customPromise from "../utils/customPromise";
+const {products} = require('../utils/products');
+
+const ItemListContainer = ({greeting}) => {
+    const [datos, setDatos] = useState ([]);
+        useEffect(()=>{
+            customPromise(2000, products)
+                .then(result => setDatos(result))
+                .catch(error => console.log(error))
+        }, [])
     return (
         <>
-        <div className="ListContainer">
-        {
-            data.map(item => 
-                <ItemList key={item.id}
-                thumbnail={item.thumbnail}
-                title={item.title}
-                description={item.description}
-                />
-                )
-        }
-        </div>
-       
+        <div className="ItemListContainer">
+            <ItemList items={datos}></ItemList>
+        </div>   
         </>
     );
 }
