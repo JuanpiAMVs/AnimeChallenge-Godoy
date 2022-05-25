@@ -10,7 +10,6 @@ const App = () => {
     <div className="App">
       <Nav></Nav>
       <ItemListContainer></ItemListContainer>
-      <ItemCount></ItemCount>
     </div>
     </>
   );

@@ -1,4 +1,11 @@
+import ItemCount from "./ItemCount";
+
 const Item = (props) => {
+
+    const onAdd = (stock) => {
+        alert('Has agregado' + stock + 'items al carrito')
+    }
+
     return (
         <>
             <div className="card">
@@ -7,7 +14,9 @@ const Item = (props) => {
                         <h5 className="card-title">{props.title}</h5>
                         <p className="card-text">{props.description}</p>
                         <a href="#" className="btn btn-primary">Buy</a>
+                        <h1>{props.stock}</h1>
                     </div>
+                    <ItemCount initial={1} stock={props.stock} onAdd={onAdd}></ItemCount>
             </div>
             {/* <p>{greeting}</p> */}
         </>

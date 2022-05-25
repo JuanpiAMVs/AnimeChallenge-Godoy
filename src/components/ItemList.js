@@ -10,7 +10,8 @@ const ItemList= ({items}) => {
                 <Item key={item.id}
                 thumbnail={item.thumbnail}
                 title={item.title}
-                description={item.description} 
+                description={item.description}
+                stock={item.stock}
                 />)
                 : <p>Cargando...........</p>
         }

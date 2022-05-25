@@ -1,22 +1,23 @@
 import { useState } from "react";
 
-const ItemCount = () =>{
-    const [stock, setStock] = useState(0); //Hook
+const ItemCount = ({stock, initial, onAdd}) =>{
+    const [count, setCount] = useState(initial); //Hook
     const add = () =>{
-        if(stock < 5) setStock(stock+1)
+        if(count < stock) setCount(count+1)
     }
     const subtract = () =>{
-        if(stock > 0) setStock(stock-1)
+        if(count > 0) setCount(stock-1)
     }
     return(
         <>
         <div className="Count">
-            <p>stock</p>
+            <p>count</p>
             <button onClick={add} type="button" className="btn btn-primary btn-stock">+</button>
             <div className="stock">
-                <p>{stock}</p>
+                <p>{count}</p>
             </div>
             <button onClick={subtract} type="button" className="btn btn-primary btn-stock">-</button>
+            <button onClick={() => onAdd(count)}>Agregar</button>
         </div>
         </>
     )
