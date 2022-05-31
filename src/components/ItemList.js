@@ -8,6 +8,7 @@ const ItemList= ({items}) => {
             items.length > 0 
             ? items.map(item => 
                 <Item key={item.id}
+                id={item.id}
                 thumbnail={item.thumbnail}
                 title={item.title}
                 description={item.description}
