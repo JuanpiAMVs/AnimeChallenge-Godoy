@@ -10,7 +10,7 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     }
     return(
         <>
-        <div className="Count">
+        <div className="Count mt-4">
             <button onClick={subtract} type="button" className="btn btn-primary btn-stock">-</button>
             <div className="stock">
                 <p>{count}</p>

@@ -9,19 +9,20 @@ const Item = (props) => {
 
     return (
         <>
+
+<div className="producto"> 
         <Link to={`/item/${props.id}`}>
-        <div className="card">
-                <img src={props.thumbnail} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                        <h5 className="card-title">{props.title}</h5>
-                        <p className="card-text">{props.description}</p>
-                        <h1>{props.stock}</h1>
-                    </div>
-                    <ItemCount initial={1} stock={props.stock} onAdd={onAdd}></ItemCount>
-            </div>
-            {/* <p>{greeting}</p> */}
-        </Link>
-          
+      <img src={props.thumbnail} alt=".."/></Link>
+      <div className="informacion">
+        <span className="i-anime">{props.description}</span>
+        <h2 className="i-price">${props.price}</h2>
+        <span className="precio-envio">{props.title}</span>
+        <p>Units available: <b>{props.stock}</b></p>
+        {props.categoryId}
+        <ItemCount initial={1} stock={props.stock} onAdd={onAdd}></ItemCount>
+      </div>
+      
+    </div>
         </>
     )
 }

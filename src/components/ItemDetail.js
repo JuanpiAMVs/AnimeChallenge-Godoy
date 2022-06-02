@@ -6,14 +6,15 @@ const ItemDetail = ({ item }) => {
     const onAdd = (stock) => {
         alert('Seleccionaste ' + stock + ' items')
     }
+    console.log(item)
     return (
         <>
             <div className="ItemDetail">
                 {
-                    item.title
+                    item && item.id
                         ?
                         <div className="d-flex">
-                            <img src={item.thumbnail} />
+                            <img src={item.thumbnail}/>
                             <div>
                                 <h1 className="my-5">{item.title}</h1>
                                 <h3>{item.description}</h3>
@@ -29,6 +30,7 @@ const ItemDetail = ({ item }) => {
                 }
             </div>
         </>
+        
     )
 }
 

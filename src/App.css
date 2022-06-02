@@ -1,18 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+:root{
+  font-size: calc(0.8em + 0.2vmax);
+}
+.body{
+  background-color: rgb(240, 240, 240);
+  padding: 1em;
+  margin: 0;
+  font-family: 'Source Sans Pro';
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  grid-template-rows: 3fr;
+  grid-gap: 1em;
+
+}
+
 .bi-cart-fill{
   color: #0000ff;
   width: 50px;
   height: 30px;
 }
 
-.card{
-  width: 15rem;
-  text-decoration: none;
-  
+.producto{
+  font-family: 'Source Sans Pro';
+  max-width: 280px;
+  height: 800px;
+  display: flex;
+  flex-flow: column;
+  border-radius: 6px;
+  box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  margin-bottom: 50px;
+    background-color: rgb(250, 250, 250);
+}
+.producto>a{
+  flex-flow: column;
+  max-width: 280px;
+  height: 500px;
+}
+.producto>a>img{
+  font-family: 'Source Sans Pro';
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card:hover{
+  box-shadow: 0 0 0.1.5em rgba(0, 0, 0, 0.2);
 }
 
-.Count{
-  display: inline-flex;
-  height: 2.5rem;
+.i-anime{
+  font-family: 'Source Sans Pro';
+  cursor: pointer;
+  background-color: rgb(52, 131, 250);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  max-width: max-content;
+  padding: 0 0.2em;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+.precio-envio{
+  font-size: 1.4rem;
+}
+.informacion{
+  font-family: 'Source Sans Pro';
+  cursor: pointer;
+  border-top: 1px solid rgb(230, 230, 230);
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
 }
 
 .stock{
@@ -22,9 +82,11 @@
   border-color: #0000ff;
   
 }
-.ListContainer{
-  display: flex;
+.i-price{
+  font-size: 1.7rem;
 }
-.card-img-top{
-  height: 30rem;
+
+.Count{
+  display: inline-flex;
+  height: 2.5rem;
 }
