@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Item = (props) => {
 
     const onAdd = (stock) => {
-        alert('Has agregado' + stock + 'items al carrito')
+        alert('Has agregado ' + stock + ' items al carrito')
     }
 
     return (

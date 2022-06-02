@@ -1,12 +1,16 @@
+import { useState } from "react";
 import ItemCount from "./ItemCount";
+import ItemDetailBtn from "./ItemDetailBtn";
 
 
 const ItemDetail = ({ item }) => {
+    const [itemCount, setItemCount] = useState(0);
+
 
     const onAdd = (stock) => {
         alert('Seleccionaste ' + stock + ' items')
+        setItemCount(stock)
     }
-    console.log(item)
     return (
         <>
             <div className="ItemDetail">
@@ -23,7 +27,15 @@ const ItemDetail = ({ item }) => {
                                     Lorem ipsum dolor sit amet consectetur adipiscing elit scelerisque, suscipit eget nostra vitae aenean euismod ligula pulvinar, ac ante tortor pretium mi nisl habitasse
                                 </p>
                                 <p>{item.stock} stock available</p>
-                                <ItemCount stock={item.stock} initial={1} onAdd={onAdd}></ItemCount>
+                          
+                                {
+                                    itemCount == 0
+                                    ?     <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}></ItemCount>
+                                    :     <ItemDetailBtn/>
+                                
+                                }
+                                  
+                              
                             </div>
                         </div>
                         : <p>Cargando...........</p>

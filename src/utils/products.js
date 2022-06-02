@@ -91,7 +91,8 @@ const products = [
         thumbnail:"https://m.media-amazon.com/images/I/51AZ4xCiUkL._AC_SL1200_.jpg",
         title:"Elaina",
         description: "Majo no Tabitabi",
-        stock:2
+        stock:2,
+        categoryId:69
     },
     {
         id:14,
@@ -100,7 +101,7 @@ const products = [
         title:"Asuna Yuuki",
         description: "Sword Art Online",
         stock:2,
-        categoryId: 69,
+        categoryId:69,
     }
 ]
 
