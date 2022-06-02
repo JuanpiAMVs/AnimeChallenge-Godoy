@@ -63,10 +63,10 @@
   font-size: 0.8em;
 }
 
-.precio-envio{
+.i-title{
   font-size: 1.4rem;
 }
-.informacion{
+.i-specs{
   font-family: 'Source Sans Pro';
   cursor: pointer;
   border-top: 1px solid rgb(230, 230, 230);
