@@ -18,7 +18,6 @@ const Item = (props) => {
         <h2 className="i-price">${props.price}</h2>
         <span className="i-title">{props.title}</span>
         <p>Units available: <b>{props.stock}</b></p>
-        {props.categoryId}
         <ItemCount initial={1} stock={props.stock} onAdd={onAdd}></ItemCount>
       </div>
       

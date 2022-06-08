@@ -6,19 +6,21 @@ const {products} = require('../utils/products');
 
 
 const ItemListContainer = ({greeting}) => {
-    const [datos, setDatos] = useState ([]);   //setDatos funcion modificadora de {datos}
-    const { categoryId} = useParams();
+    const [datos, setDatos] = useState([]);
+    const { idCategory } = useParams();
 
-    console.log(categoryId);
+    console.log(idCategory);
 
+    //componentDidUpdate
     useEffect(() => {
         customPromise(2000, products.filter(item => {
-            if (categoryId === undefined) return item;
-            return item.categoryId === parseInt(categoryId)
+            if (idCategory === undefined) return item;
+            return item.categoryId === parseInt(idCategory)
         }))
             .then(result => setDatos(result))
             .catch(err => console.log(err))
     }, [datos]);
+
 
 
 

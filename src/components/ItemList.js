@@ -14,6 +14,7 @@ const ItemList= ({items}) => {
                 title={item.title}
                 description={item.description}
                 stock={item.stock}
+                categoryId={item.categoryId}
                 />)
                 : <p>Cargando...........</p>
         }
