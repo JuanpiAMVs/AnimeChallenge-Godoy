@@ -6,7 +6,7 @@ import ItemDetailBtn from "./ItemDetailBtn";
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
-    const test = useContext(CartContext)
+    const test = useContext(CartContext);
 
 
     const onAdd = (stock) => {
@@ -33,7 +33,7 @@ const ItemDetail = ({ item }) => {
                                 <p>{item.stock} stock available</p>
                           
                                 {
-                                    itemCount == 0
+                                    itemCount === 0
                                     ?     <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}></ItemCount>
                                     :     <ItemDetailBtn/>
                                 
