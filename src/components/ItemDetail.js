@@ -13,7 +13,7 @@ const ItemDetail = ({ item }) => {
         alert('Seleccionaste ' + stock + ' items')
         setItemCount(stock);
         // envia el producto al carrito
-        test.addToCart(item)
+        test.addToCart(item, stock)
     }
     return (
         <>

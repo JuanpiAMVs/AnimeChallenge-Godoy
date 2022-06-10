@@ -9,7 +9,8 @@ const products = [
         category: {
             name: "SwordArtOnline",
             id: 69
-          }
+          },
+          qty:""
     },
     {   id:3,
         price: 35.99,
@@ -21,7 +22,8 @@ const products = [
         category: {
             name: "Demon Slayer",
             id: 22
-          }
+          },
+          qty:""
     },
     {
         id:4,
@@ -34,7 +36,8 @@ const products = [
         category: {
             name: "SwordArtOnline",
             id: 69
-          }
+          },
+          qty:""
     },
     {
         id:5,
@@ -47,7 +50,8 @@ const products = [
         category: {
             name: "Mushoku Tensei",
             id: 66
-          }
+          },
+        qty:""
     },
     {
         id:6,
@@ -60,7 +64,8 @@ const products = [
         category: {
             name: "Seishun Buta Yarō",
             id: 42
-          }
+          },
+        qty:""
     },
     {
         id:7,
@@ -73,7 +78,8 @@ const products = [
         category: {
             name: "Fate",
             id: 5
-          }
+          },
+        qty:""
     },
     {
         id:8,
@@ -86,7 +92,8 @@ const products = [
         category: {
             name: "OnePiece",
             id: 45
-          }
+          },
+          qty:""
     },
     {
         id:9,
@@ -99,7 +106,8 @@ const products = [
         category: {
             name: "Bleach",
             id: 10
-          }
+          },
+          qty:""
     },
     {
         id:10,
@@ -112,7 +120,8 @@ const products = [
         category: {
             name: "Kaguya-sama",
             id: 13
-          }
+          },
+          qty:""
     },
     {
         id:11,
@@ -125,7 +134,8 @@ const products = [
         category: {
             name: "Fate",
             id: 5
-          }
+          },
+          qty:""
     },
     {
         id:12,
@@ -138,7 +148,8 @@ const products = [
         category: {
             name: "Rent-a-Girlfriend",
             id: 18
-          }
+          },
+          qty:""
     },
     {
         id:13,
@@ -151,7 +162,8 @@ const products = [
         category: {
             name: "Majo no Tabitabi",
             id: 57
-          }
+          },
+          qty:""
     },
     {
         id:14,
@@ -164,7 +176,8 @@ const products = [
         category: {
             name: "SwordArtOnline",
             id: 69
-          }
+          },
+          qty:""
     }
 ]
 
