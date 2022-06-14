@@ -9,10 +9,10 @@ const Cart = () =>{
     <button onClick={() => test.clear()}>Clear</button>
         {
              test.cartList.length > 0 ?
-              test.cartList.map(item => <div className="d-flex justify-content-around">
+              test.cartList.map((item) => <div className="d-flex justify-content-around">
                  <p>{item.title}</p>
                  <p> Cantidad: {item.qty}</p>
-                 <p> Subtotal: ${item.price * item.qty}</p>
+                 <p> Subtotal: ${test.Subtotal(item)}</p>
                  <button onClick={() => test.deleteItem(item.id)}>X</button>
                  
                  

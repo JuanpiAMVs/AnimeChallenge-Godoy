@@ -24,18 +24,19 @@ const CartContextProvider = ({ children }) => {
         setCartList(result)
  }
 
- const Subtotal = () => {
-     return cartList.map(item => item.price * item.qty)
+ const Subtotal = (item) => {
+     return item.price * item.qty
  }
 
  const clear = () => {
      setCartList([])
      console.log(cartList)
  }
-
- 
+ const qtyItems =  () => {
+    return cartList.length;
+ }
  return (
-        <CartContext.Provider value={{cartList, addToCart, deleteItem, Subtotal, clear}}>
+        <CartContext.Provider value={{cartList, addToCart, deleteItem, Subtotal, clear, qtyItems}}>
             {children}
         </CartContext.Provider>
     );

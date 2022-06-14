@@ -91,3 +91,13 @@
   display: inline-flex;
   height: 2.5rem;
 }
+.qtyItems{
+  color: blue;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 25px;
+  font-size: 0.8rem;
+}
