@@ -15,7 +15,7 @@ const CartContextProvider = ({ children }) => {
 
      console.log(item)
      if (cartList.find(products => products.id === item.id)){
-         item = ""
+         item.qty = qty + stock
      } else{
         setCartList([...cartList, 
             item])
