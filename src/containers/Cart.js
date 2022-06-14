@@ -12,17 +12,16 @@ const Cart = () =>{
               test.cartList.map((item) => <div className="d-flex justify-content-around">
                  <p>{item.title}</p>
                  <p> Cantidad: {item.qty}</p>
-                 <p> Subtotal: ${test.Subtotal(item)}</p>
-                 <button onClick={() => test.deleteItem(item.id)}>X</button>
-                 
-                 
+                 <p> Subtotal: ${test.Subtotal(item)}{console.log(test.Subtotal(item))}</p>
+                 <button onClick={() => test.deleteItem(item.id)}>X</button>         
                  {console.log(test.cartList)}
 
              </div>
-            ) 
+            )
             : <p>carrito vacio</p> 
                
         }
+        { <p> Total: $ {test.total()}{test.suma}{console.log(test.Total)}</p>}
         
         
     </>
