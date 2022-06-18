@@ -85,7 +85,7 @@ const products = [
         id:8,
         price: 18.55,
         thumbnail:"https://m.media-amazon.com/images/I/619TtQOtnRS._AC_SL1312_.jpg",
-        title:"Boa Hancock ",
+        title:"Boa Hancock",
         description: "One Piece",
         stock:2,
         categoryId:45,
