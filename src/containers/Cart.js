@@ -21,7 +21,7 @@ const Cart = () =>{
                 phone: "1232132321"
             },
             date: serverTimestamp(),
-            total: test.suma,
+            total: test.total(),
             items: itemsForDB
         }
         console.log(order)
@@ -47,21 +47,33 @@ const Cart = () =>{
     return(
     <>
     <button onClick={() => test.clear()}>Clear</button>
+    <h1 className="mb-5">Shopping cart</h1>
         {
              test.cartList.length > 0 ?
-              test.cartList.map((item) => <div className="d-flex justify-content-around">
-                 <p>{item.title}</p>
-                 <p> Cantidad: {item.qty}</p>
-                 <p> Subtotal: ${test.Subtotal(item)}{console.log(test.Subtotal(item))}</p>
-                 <button onClick={() => test.deleteItem(item.id)}>X</button>         
-                 {console.log(test.cartList)}
-
+             
+              test.cartList.map((item) => <> <div class="main">       
+              <section className="shopping-cart">
+                 <ol className="ui-list shopping-cart--list" id="shopping-cart--list">    
+                 <button onClick={() => test.deleteItem(item.id)}>X</button>
+                     <li className="_grid shopping-cart--list-item">               
+                       <div className="_column product-image">   
+                         <img className="product-image--img" src={item.thumbnail} alt="Item image" />  
+                       </div>
+                       <div className="_column product-info"> 
+                         <h4 className="product-name">{item.title}</h4>
+                         <p className="product-desc">{item.description}</p>
+                         <p> Cantidad: {item.qty}</p>   
+                         <div className="price product-single-price">${test.Subtotal(item)}</div>                
+                       </div>
+                     </li>      
+                 </ol>  
+               </section>
              </div>
+             </>
             )
-            : <p>carrito vacio</p> 
-               
+            : <p>carrito vacio</p>       
         }
-        { <p> Total: $ {test.total()}{test.suma}{console.log(test.Total)}</p>}
+        { <h2> Total: $ {test.total()}</h2>}
         <button onClick={createOrder}>Buy</button>
         
         

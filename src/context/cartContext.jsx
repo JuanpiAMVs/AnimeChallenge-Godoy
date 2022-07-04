@@ -6,8 +6,6 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
  const [cartList, setCartList] = useState([])
- const [Total, setTotal] = useState([])
- const [suma, setSuma] = useState(0)
 
  const addToCart = (item, stock) =>{    
      const substock = item.stock -= stock;
@@ -29,19 +27,15 @@ const CartContextProvider = ({ children }) => {
 
  const Subtotal = (item) => {
      const sub = item.price * item.qty
-     useEffect(() => {
-            return setTotal([...Total, sub])
-     },[setTotal])
-   
-     return(sub)
+     return sub
  }
 
  const total = () =>{
     let suma = 0
-    for (let i = 0; i < Total.length; ++i){
-        suma += Total[i]
-    }
-    return setSuma(suma)
+    cartList.forEach((item) => {
+        suma += Subtotal(item)
+    })
+    return suma
  }
 
 
@@ -54,7 +48,7 @@ const CartContextProvider = ({ children }) => {
  }
 
  return (
-        <CartContext.Provider value={{cartList, addToCart, deleteItem, Subtotal, clear, qtyItems, Total, total, suma}}>
+        <CartContext.Provider value={{cartList, addToCart, deleteItem, Subtotal, clear, qtyItems, total}}>
             {children}
         </CartContext.Provider>
     );
